@@ -1,8 +1,9 @@
 package instruments;
 
+import behaviours.IPlay;
 import behaviours.ISell;
 
-public abstract class Instrument implements ISell {
+public abstract class Instrument implements ISell, IPlay {
 
     private String model;
     private String make;
@@ -10,14 +11,16 @@ public abstract class Instrument implements ISell {
     private String type;
     private double buyInCost;
     private double sellingPrice;
+    private String description;
 
-    public Instrument(String model, String make, String colour, String type, double buyInCost, double sellingPrice){
+    public Instrument(String model, String make, String colour, String type, double buyInCost, double sellingPrice, String description){
         this.model = model;
         this.make = make;
         this.colour = colour;
         this.type = type;
         this.buyInCost = buyInCost;
         this.sellingPrice = sellingPrice;
+        this.description = description;
     }
 
     public String getModel() {
@@ -55,5 +58,9 @@ public abstract class Instrument implements ISell {
     public double calculateMarkUp(){
         double profit = this.getSellingPrice() - this.getBuyInCost();
         return profit;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

@@ -11,7 +11,7 @@ public class BassTest {
 
     @Before
     public void before(){
-        bass = new BassGuitar("Jazz", "Fender", "Black", "String", 250, 450);
+        bass = new BassGuitar("Jazz", "Fender", "Black", "String", 250, 450, "Solid Bass");
     }
 
     @Test

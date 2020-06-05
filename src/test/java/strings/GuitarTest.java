@@ -12,7 +12,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar("Jaguar", "Fender", "Black", "String", 400, 600);
+        guitar = new Guitar("Jaguar", "Fender", "Black", "String", 400, 600, "Mighty Fine Guitar");
     }
 
     @Test
@@ -49,4 +49,16 @@ public class GuitarTest {
     public void canGetProfit(){
         assertEquals(200, guitar.calculateMarkUp(), 0.01);
     }
+
+    @Test
+    public void canPlay(){
+        assertEquals("Stairway to heaven riff", guitar.play());
+    }
+
+    @Test
+    public void canGetDesciption(){
+        assertEquals("Mighty Fine Guitar", guitar.getDescription());
+    }
+
+
 }
