@@ -8,12 +8,12 @@ public abstract class Instrument implements ISell, IPlay {
     private String model;
     private String make;
     private String colour;
-    private String type;
+    private InstrumentType type;
     private double buyInCost;
     private double sellingPrice;
     private String description;
 
-    public Instrument(String model, String make, String colour, String type, double buyInCost, double sellingPrice, String description){
+    public Instrument(String model, String make, String colour, InstrumentType type, double buyInCost, double sellingPrice, String description){
         this.model = model;
         this.make = make;
         this.colour = colour;
@@ -35,7 +35,7 @@ public abstract class Instrument implements ISell, IPlay {
         return this.colour;
     }
 
-    public String getType() {
+    public InstrumentType getType() {
         return this.type;
     }
 

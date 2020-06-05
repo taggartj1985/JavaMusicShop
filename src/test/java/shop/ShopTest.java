@@ -1,5 +1,6 @@
 package shop;
 
+import instruments.InstrumentType;
 import instruments.strings.BassGuitar;
 import instruments.strings.Guitar;
 import org.junit.Before;
@@ -21,8 +22,8 @@ public class ShopTest {
     @Before
     public void before(){
         shop = new Shop("Don't Fret");
-        guitar = new Guitar("Jaguar", "Fender", "Black", "String", 400, 600, "Mighty Fine Guitar");
-        bass = new BassGuitar("Jazz", "Fender", "Black", "String", 250, 450, "Solid Bass");
+        guitar = new Guitar("Jaguar", "Fender", "Black", InstrumentType.STRING, 400, 600, "Mighty Fine Guitar");
+        bass = new BassGuitar("Jazz", "Fender", "Black", InstrumentType.STRING, 250, 450, "Solid Bass");
         plectrums = new Plectrums("Because you lose them all the time", 0.10, 0.50);
         sheetmusic = new SheetMusic("Blank notation pad", 2.50, 5);
     }

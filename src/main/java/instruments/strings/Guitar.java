@@ -1,9 +1,10 @@
 package instruments.strings;
 
 import instruments.Instrument;
+import instruments.InstrumentType;
 
 public class Guitar extends Instrument {
-    public Guitar(String model, String make, String colour, String type, double buyInCost, double sellingPrice, String description){
+    public Guitar(String model, String make, String colour, InstrumentType type, double buyInCost, double sellingPrice, String description){
         super(model, make, colour, type, buyInCost, sellingPrice, description);
     }
 
