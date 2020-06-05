@@ -46,6 +46,18 @@ public class BassTest {
 
     @Test
     public void canGetProfit(){
-        assertEquals(200, bass.profitOnProduct(), 0.01);
+        assertEquals(200, bass.calculateMarkUp(), 0.01);
+    }
+
+    @Test
+    public void canSetSellPrice(){
+        bass.setSellingPrice(700);
+        assertEquals(700, bass.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canSetBuyPrice(){
+        bass.setBuyInCost(300);
+        assertEquals(300, bass.getBuyInCost(), 0.01);
     }
 }

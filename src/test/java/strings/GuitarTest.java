@@ -47,6 +47,6 @@ public class GuitarTest {
 
     @Test
     public void canGetProfit(){
-        assertEquals(200, guitar.profitOnProduct(), 0.01);
+        assertEquals(200, guitar.calculateMarkUp(), 0.01);
     }
 }
